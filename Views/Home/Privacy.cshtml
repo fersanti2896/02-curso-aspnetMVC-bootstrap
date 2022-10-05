@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<h4>Ejemplo 1: Imágenes en columnas</h4>
+
+<div class="row gy-4">
+    <div class="col-sm-3">
+        <img class="img-fluid" src="https://dc722jrlp2zu8.cloudfront.net/media/featured_images/que-es-javaScript.jpg"/>
+    </div>
+    <div class="col-sm-3">
+        <img class="img-fluid" src="https://dc722jrlp2zu8.cloudfront.net/media/featured_images/que-es-javaScript.jpg"/>
+    </div>
+    <div class="col-sm-3">
+        <img class="img-fluid" src="https://dc722jrlp2zu8.cloudfront.net/media/featured_images/que-es-javaScript.jpg"/>
+    </div>
+    <div class="col-sm-3">
+        <img class="img-fluid" src="https://dc722jrlp2zu8.cloudfront.net/media/featured_images/que-es-javaScript.jpg"/>
+    </div>
+</div>
+
+<br />
+<h4>Ejemplo 2: Imagen de tipo thumbnail</h4>
+
+<img class="img-thumbnail rounded-circle" 
+     src="https://d500.epimg.net/cincodias/imagenes/2016/03/16/lifestyle/1458143779_942162_1458143814_noticia_normal.jpg" />
+
+
+<h4>Colores</h4>
+
+<div>
+    <button class="btn btn-primary">Botón Primario</button>
+</div>
+
+<br />
+<h4>Tablas</h4>
+
+<table class="table table-hover">
+    <thead>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Fer</td>
+            <td>Santi</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mar</td>
+            <td>Contreras</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Desconocido</td>
+            <td colspan="2">Desconocido</td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<div>Sin ratio:</div>
+
+<iframe width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/C3POgrOsjsQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
+<div>Con ratio: </div>
+
+<div class="ratio ratio-16x9">
+    <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/C3POgrOsjsQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+</div>
+
+<hr />
+
+@*<div class="row gy-4">
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/C3POgrOsjsQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/C3POgrOsjsQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/C3POgrOsjsQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>*@
+
+<br />
+
+<h4>Anchuras</h4>
+
+<div class="w-25 p-3 bg-primary">Width 25%</div>
+<div class="w-50 p-3 bg-secondary">Width 50%</div>
+<div class="w-75 p-3 bg-primary">Width 75%</div>
+<div class="w-100 p-3 bg-secondary">Width 100%</div>
+<div class="w-auto p-3 bg-primary">Width auto</div>
+
+<h4>Altura</h4>
+
+<div style="height: 100px;" class="bg-info">
+    <div class="h-25 d-inline-block bg-primary" style="width: 120px;">Height 25%</div>
+    <div class="h-50 d-inline-block bg-secondary" style="width: 120px;">Height 50%</div>
+    <div class="h-75 d-inline-block bg-primary" style="width: 120px;">Height 75%</div>
+    <div class="h-100 d-inline-block bg-secondary" style="width: 120px;">Height 100%</div>
+    <div class="h-auto d-inline-block bg-primary" style="width: 120px;">Height auto</div>
+</div>
+
+<h4>Toda la pantalla</h4>
+
+<div class="vw-100 bg-success">Width 100vw</div>
+<div class="vh-100 bg-secondary">Height 100vh</div>
+
+<h4>Márgenes</h4>
+
+<div>Fila 1</div>
+<div class="my-3">Fila 2</div>
+<div>Fila 3</div>
+
+<button class="btn btn-primary px-5">Botón 1</button>
+<button class="btn btn-secondary ms-5">Botón 2</button>
+
+<h4>Utilidades de Texto</h4>
+
+<p class="text-start">Texto a la izquierda</p>
+<p class="text-center">Texto al centro</p>
+<p class="text-end">Texto a la derecha</p>
+
+<p class="text-sm-center">Texto centralizado en pantallas pequeñas o más grandes</p>
+<p class="text-md-center">Texto centralizada en pantallas medias o más grandes</p>
+<p class="text-lg-center">Texto centralizada en pantallas grandes o más grandes</p>
+<p class="text-xl-center">Texto centralizado en pantallas extra-grandes o más grandes</p>
+
+<h4>Texto dentro de su contenedor</h4>
+
+<div class="badge bg-primary text-wrap" style="width: 6rem;">
+    Este texto no se sale de su contenedor.
+</div>
+
+<div class="badge bg-primary text-wrap text-break" style="width: 6rem;">
+    deeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+</div>
+
+<p class="text-lowercase">Minúsculas</p>
+<p class="text-uppercase">Mayúsculas</p>
+<p class="text-capitalize">Cada palabra con mayúsculas</p>
+
+<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />

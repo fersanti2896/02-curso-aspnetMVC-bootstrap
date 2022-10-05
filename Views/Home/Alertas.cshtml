@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "Alertas";
+}
+
+<h1>Alertas</h1>
+
+<div class="alert alert-primary" role="alert">
+    A simple primary alert
+</div>
+
+<button class="btn btn-primary" onclick="mostrarAlertaExitoso()">Mostrar alerta exitoso</button>
+<button class="btn btn-danger" onclick="mostrarAlertaError()">Mostrar alerta error</button>
+
+<div>
+    Las alertas se van a mostrar aqui
+</div>
+
+<div id="contenedor-alertas"></div>
+
+<div id="carruselEjemplo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://estaticos.muyinteresante.es/uploads/images/article/5f9083f55bafe8ee5d42e0e8/1-planetas-en-el-espacio.jpg" class="d-block w-100" />
+        </div>
+
+        <div class="carousel-item ">
+            <img src="https://st.depositphotos.com/1494134/3597/v/450/depositphotos_35977825-stock-illustration-glossy-planets-vector-set.jpg" class="d-block w-100" />
+        </div>
+
+        <div class="carousel-item ">
+            <img src="https://img.freepik.com/vector-gratis/conjunto-planetas-diferentes-dibujados-mano_23-2148276331.jpg?w=2000" class="d-block w-100" />
+        </div>
+    </div>
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carruselEjemplo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carruselEjemplo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carruselEjemplo" data-bs-slide-to="2"></button>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselEjemplo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselEjemplo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<br />
+<!-- Abre modal -->
+<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ejemploModal">
+    Abrir modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="ejemploModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Se ha detectado inactividad</h5>
+                <button type="button" class="btn-close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>Este es un formulario</p>
+                <form>
+                    <div class="mb-3">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-bs-dismiss="modal">Salir</button>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Mantener Sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        function mostrarAlertaExitoso() {
+            mostrarAlerta('Este es un mensaje exitoso', 'success');
+        }
+
+        function mostrarAlertaError() {
+            mostrarAlerta('Esto es un mensaje de error', 'danger');
+        }
+
+        function mostrarAlerta(msg, tipo) {
+            const alerta = document.createElement("div");
+            alerta.innerHTML = `<div class="alert alert-`+ tipo +`" role="alert"> `+ msg +` </div>`;
+
+            const contenedorAlertas = document.getElementById('contenedor-alertas');
+            contenedorAlertas.append(alerta);
+        }
+    </script>
+}

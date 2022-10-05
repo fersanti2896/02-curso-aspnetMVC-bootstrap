@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.row {
+    border: 1px solid white;
+    height: 100px;
+    /*margin-bottom: 1rem;*/
+}
+
+.row > div {
+    border: 1px solid white;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 100%;
+}

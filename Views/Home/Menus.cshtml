@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Menus";
+}
+
+<h1>Menus</h1>
+
+<ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">Tab 1</button>
+    </li>
+
+    <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">Tab 2</button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="tab1">Inglés 1</div>
+    <div class="tab-pane fade" id="tab2">Programación</div>
+</div>
+
+<br />
+<button class="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#ejemploOffCanvas">Abrir menú</button>
+
+<!-- Menu Lateral -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="ejemploOffCanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Mi aplicación</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div>
+            Texto de ejemplo
+        </div>
+    </div>
+</div>
+
+<!-- Mostrando toasts -->
+
+<br />
+<button type="button" class="btn btn-primary" onclick="mostrarMensaje()">Mostrando Toasts</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="miToast" class="toast">
+        <div class="toast-header">
+            <strong class="me-auto">Mensaje Enviado</strong>
+            <small>Hace unos instantes</small>
+            <button class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+
+        <div class="toast-body">
+            El mensaje fue enviado
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function mostrarMensaje() {
+            var ejemploToast = document.getElementById('miToast');
+            var toast = new bootstrap.Toast(ejemploToast);
+
+            toast.show();
+        }
+    </script>
+}
